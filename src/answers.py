@@ -1,3 +1,4 @@
+import io
 from io import BytesIO
 
 import pandas as pd
@@ -269,7 +270,7 @@ def to_excel(df):
 
     worksheet.set_column("A:A", None)
 
-    worksheet.save()
+    writer.save()
 
     processed_data = output.getvalue()
 
